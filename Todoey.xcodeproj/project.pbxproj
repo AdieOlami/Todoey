@@ -14,9 +14,11 @@
 		E7D89E3C201F63BF0047562C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D89E3A201F63BF0047562C /* Main.storyboard */; };
 		E7D89E3E201F63BF0047562C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D89E3D201F63BF0047562C /* Assets.xcassets */; };
 		E7D89E41201F63BF0047562C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D89E3F201F63BF0047562C /* LaunchScreen.storyboard */; };
+		F478D6B053B8610E38F2D1DA /* Pods_Todoey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4888F5EDAE9CC0A7CF377A /* Pods_Todoey.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24E6B3C8BADF1CF228226DF9 /* Pods-Todoey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todoey.release.xcconfig"; path = "Pods/Target Support Files/Pods-Todoey/Pods-Todoey.release.xcconfig"; sourceTree = "<group>"; };
 		7B4888F5EDAE9CC0A7CF377A /* Pods_Todoey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todoey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E791C08620267DC3005CF2EA /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		E791C0A920270A8C005CF2EA /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +29,7 @@
 		E7D89E3D201F63BF0047562C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7D89E40201F63BF0047562C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7D89E42201F63BF0047562C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB54F6C332C5F4D0F803E631 /* Pods-Todoey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todoey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Todoey/Pods-Todoey.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F478D6B053B8610E38F2D1DA /* Pods_Todoey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +50,15 @@
 				7B4888F5EDAE9CC0A7CF377A /* Pods_Todoey.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97CD1398A1E93048A0A9D31B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB54F6C332C5F4D0F803E631 /* Pods-Todoey.debug.xcconfig */,
+				24E6B3C8BADF1CF228226DF9 /* Pods-Todoey.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		E791C08220266FF4005CF2EA /* Controllers */ = {
@@ -80,6 +93,7 @@
 				E7D89E35201F63BF0047562C /* Todoey */,
 				E7D89E34201F63BF0047562C /* Products */,
 				2A801E962FF225651E477A9B /* Frameworks */,
+				97CD1398A1E93048A0A9D31B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7D89E45201F63BF0047562C /* Build configuration list for PBXNativeTarget "Todoey" */;
 			buildPhases = (
+				2FA6AE0C29B8075459BEDA0E /* [CP] Check Pods Manifest.lock */,
 				E7D89E2F201F63BF0047562C /* Sources */,
 				E7D89E30201F63BF0047562C /* Frameworks */,
 				E7D89E31201F63BF0047562C /* Resources */,
+				4053FE68473D8D5720387655 /* [CP] Embed Pods Frameworks */,
+				FAF5614B6383200BFA051599 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,6 +195,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FA6AE0C29B8075459BEDA0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Todoey-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4053FE68473D8D5720387655 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Todoey/Pods-Todoey-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Todoey/Pods-Todoey-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAF5614B6383200BFA051599 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Todoey/Pods-Todoey-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E7D89E2F201F63BF0047562C /* Sources */ = {
@@ -322,6 +395,7 @@
 		};
 		E7D89E46201F63BF0047562C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB54F6C332C5F4D0F803E631 /* Pods-Todoey.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +412,7 @@
 		};
 		E7D89E47201F63BF0047562C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24E6B3C8BADF1CF228226DF9 /* Pods-Todoey.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
