@@ -11,7 +11,8 @@ import RealmSwift
 
 class Category: Object {
     @objc dynamic var name : String = ""
-    
+    @objc dynamic var color : String = ""
+
     // relationship with Items
     // List is d substitute for array in Realm
     let items = List<Item>()
